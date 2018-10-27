@@ -26,3 +26,27 @@ describe('make', () => {
         assert.deepEqual(result, 289777);
     });
   });
+
+  describe('sumOfOther', () => {
+    const sumOfOther = require('../src/sumOfOther.js');
+
+    it('sumOfOther_test_1', () => {
+      const result = sumOfOther([1, 2, 3]);
+      assert.deepEqual(result, [5, 4, 3]);
+    });
+  
+    it('sumOfOther_test_2', () => {
+        const result = sumOfOther([2, 56, 7]);
+      assert.deepEqual(result, [63, 9, 58]);
+    });
+  
+    it('sumOfOther_test_3', () => {
+        const result = sumOfOther([25, 24, 3, 11, 18]);
+      assert.deepEqual(result, [56, 57, 78, 70, 63]);
+    });
+  
+    it('sumOfOther_test_4', () => {
+        const result = sumOfOther([25, -24, 3, -11, 18]);
+      assert.deepEqual(result, [-14, 35, 8, 22, -7]);
+    });
+  });
